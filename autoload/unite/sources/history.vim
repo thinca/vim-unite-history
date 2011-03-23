@@ -1,5 +1,5 @@
 " unite source: history
-" Version: 0.1.1
+" Version: 0.1.2
 " Author : thinca <thinca+vim@gmail.com>
 " License: Creative Commons Attribution 2.1 Japan License
 "          <http://creativecommons.org/licenses/by/2.1/jp/deed.en>
@@ -17,7 +17,6 @@ function! s:source.gather_candidates(args, context)  " {{{2
   \                 'v:val[1] != ""'), '{
   \   "word" : v:val[1],
   \   "kind" : "command",
-  \   "source" : self.name,
   \   "action__command": v:val[1],
   \   "action__type": self.type,
   \   "action__index": v:val[0],
