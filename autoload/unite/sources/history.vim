@@ -11,7 +11,7 @@ let s:source = {
 \   'action_table': {},
 \ }
 
-function! s:source.gather_candidates(args, context)  " {{{2
+function! s:source.gather_candidates(args, context)
   return map(filter(map(reverse(range(1, histnr(self.type))),
   \                     '[v:val, histget(self.type, v:val)]'),
   \                 'v:val[1] != ""'), '{
@@ -34,7 +34,7 @@ let s:action_table = {
 \   },
 \ }
 
-function! s:action_table.delete.func(candidates)  " {{{2
+function! s:action_table.delete.func(candidates)
   call map(a:candidates, 'histdel(v:val.action__type, v:val.action__index)')
 endfunction
 
