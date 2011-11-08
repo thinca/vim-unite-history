@@ -29,6 +29,8 @@ let s:action_table = {
 \   'delete': {
 \     'description': 'delete from history',
 \     'is_selectable': 1,
+\     'is_invalidate_cache': 1,
+\     'is_quit': 0,
 \   },
 \ }
 
