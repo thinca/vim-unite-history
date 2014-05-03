@@ -18,6 +18,7 @@ function! s:source.gather_candidates(args, context)
   \   "abbr": self.type . v:val[1],
   \   "kind": "command",
   \   "action__command": v:val[1],
+  \   "action__histadd": 1,
   \   "action__type": self.type,
   \   "action__index": v:val[0],
   \ }')
